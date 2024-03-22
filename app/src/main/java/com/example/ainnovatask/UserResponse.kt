@@ -1,12 +1,14 @@
 package com.example.ainnovatask
 
-data class UserResponse (
-    val id: Long,
-    val username: String,
-    val email: String,
-    val firstName: String,
-    val lastName: String,
-    val gender: String,
-    val image: String,
-    val token: String?
+import com.google.gson.annotations.SerializedName
+
+data class UserResponse(
+    @SerializedName("id") val id: Long,
+    @SerializedName("username") val username: String,
+    @SerializedName("email") val email: String,
+    @SerializedName("firstName") val firstName: String,
+    @SerializedName("lastName") val lastName: String,
+    @SerializedName("gender") val gender: String,
+    @SerializedName("image") val image: String,
+    @SerializedName("token") val token: String?
 )

@@ -6,5 +6,5 @@ import retrofit2.http.POST
 
 interface ApiInterface {
     @POST("auth/login")
-    fun postData(@Body dataModel: UserRequest?): Call<UserResponse>
+    fun requestLogin(@Body dataModel: UserRequest?): Call<UserResponse>
 }
