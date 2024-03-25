@@ -8,6 +8,8 @@ import android.widget.EditText
 import retrofit2.Callback
 import retrofit2.Call
 import retrofit2.Response
+import android.content.Intent
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,15 +36,15 @@ class MainActivity : AppCompatActivity() {
                         if (loginResponse != null) {
                             val token = loginResponse.token
                             if (!token.isNullOrBlank()) {
-                                //navigate to home screen (implement it first)
+                                navigateToHomeScreen()
                             } else {
-                                //display error message
+                                Toast.makeText(applicationContext, "Invalid login credentials", Toast.LENGTH_SHORT).show()
                             }
                         } else {
-                            //display error message when response is null
+                            Toast.makeText(applicationContext, "Invalid login credentials", Toast.LENGTH_SHORT).show()
                         }
                     } else {
-                        //display error message when request fails
+                        Toast.makeText(applicationContext, "Invalid login credentials", Toast.LENGTH_SHORT).show()
                     }
                 }
 
@@ -51,5 +53,9 @@ class MainActivity : AppCompatActivity() {
                 }
             })
         }
+    }
+    private fun navigateToHomeScreen() {
+        val intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)
     }
 }
