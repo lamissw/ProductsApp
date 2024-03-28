@@ -1,4 +1,4 @@
-import com.example.ainnovatask.Product
+import com.example.ainnovatask.ProductResponse
 import com.example.ainnovatask.UserRequest
 import com.example.ainnovatask.UserResponse
 import retrofit2.Call
@@ -11,5 +11,5 @@ interface ApiInterface {
     fun requestLogin(@Body dataModel: UserRequest?): Call<UserResponse>
 
     @GET("products")
-    fun getProducts() : Call<List<Product>>
+    fun getProducts() : Call<ProductResponse>
 }
