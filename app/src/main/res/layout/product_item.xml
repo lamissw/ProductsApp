@@ -6,8 +6,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="8dp">
+        android:layout_margin="10dp"
+        android:padding="16dp"
+        android:backgroundTint="#EDEFFA">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,6 +25,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="130dp"
                 android:layout_marginTop="16dp"
+                android:textColor="#142EDD"
+                android:textStyle="bold"
                 android:textSize="30sp"></TextView>
             <TextView
                 android:id="@+id/product_description"
@@ -31,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/product_title"
                 android:layout_marginStart="130dp"
+                android:textColor="#142EDD"
                 android:textSize="20sp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
