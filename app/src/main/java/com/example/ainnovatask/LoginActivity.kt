@@ -11,10 +11,10 @@ import retrofit2.Response
 import android.content.Intent
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.loginin_screen)
 
         val retrofit = ApiService.buildService(ApiInterface::class.java)
 
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun navigateToHomeScreen() {
-        val intent = Intent(this, MainActivity2::class.java)
+        val intent = Intent(this, ProductActivity::class.java)
         startActivity(intent)
     }
 }

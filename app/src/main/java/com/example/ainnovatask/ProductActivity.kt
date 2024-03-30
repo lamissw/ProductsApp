@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.LinearLayoutManager
 
 
-class MainActivity2 : AppCompatActivity() {
+class ProductActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.product_screen)
 
         val recyclerView = findViewById<RecyclerView>(R.id.productRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
